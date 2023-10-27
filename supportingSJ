@@ -1,0 +1,346 @@
+// COPY MENU  FOR MOBILE
+function copyMenu () {
+
+// Copy inside .dpt-cat to departments
+var dptCategory = document.querySelector('.dpt-cat');
+var dptPlace = document.querySelector('.departments');
+dptPlace.innerHTML = dptCategory.innerHTML;
+
+//COPY INSIDE NAV TO NAV
+
+ var mainNav = document.querySelector('.header-nav nav');
+ var navPlace = document.querySelector('.off-canvas nav')
+ navPlace.innerHTML = mainNav.innerHTML;
+
+//  COPY .HEADER-TOP .WRAPPER TO .THETOP-NAV
+
+var topNav = document.querySelector('.header-top .wrapper');
+var topPlace = document.querySelector('.off-canvas .thetop-nav')
+topPlace.innerHTML = topNav.innerHTML;
+
+
+}
+copyMenu();
+
+
+// Show mobile menu
+const menuButton = document.querySelector('.trigger'),
+      closeButton = document.querySelector('.t-close'),
+      addclass = document.querySelector('.site');
+menuButton.addEventListener('click', function(){
+  addclass.classList.toggle('showmenu')
+})
+closeButton.addEventListener('click', function() {
+  addclass.classList.remove('showmenu')
+})
+
+// SHOW SUB MENU ON MOBILE 
+
+const submenu = document.querySelectorAll('.has-child .icon-small');
+submenu.forEach((menu) => menu.addEventListener('click', toggle));
+
+function toggle(e) {
+  e.preventDefault();
+  submenu.forEach((item) => item != this ? item.closest('.has-child').classList.remove('expand') : null);
+  if (!this.closest('.has-child').classList !='expand');
+  this.closest('.has-child').classList.toggle('expand')
+}
+
+// Slider 
+const swiper = new Swiper('.swiper', {
+
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+});
+
+
+
+<div class="trending">
+<div class="container">
+  <div class="wrapper flexitem">
+    <div class="sectop ">
+      <h2><span class="circle"></span><span>Trending Products</span></h2>
+    </div>
+   
+    <div class="column">
+      <div class="flexwrap">
+        <div class="row products big">
+          <div class="item">
+            <div class="offer">
+              <p>Offer ends at</p>
+              <ul class="flexcenter">
+                <li>1</li>
+                <li>15</li>
+                <li>27</li>
+                <li>60</li>
+              </ul>
+            </div>
+
+            <div class="media">
+              <div class="thumbnail object-cover">
+                <a href="#">
+                <img src="assets/products/apparel4.jpg" alt="">
+              </a>
+              </div>
+              <div class="hoverable">
+                <ul>
+                  <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
+                  <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                  <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                </ul>
+              </div>
+              <div class="discount circle flexcenter"><span>31%</span></div>
+            </div>
+            <div class="content">
+              <div class="rating">
+                <div class="stars"></div>
+                <span class="mini-text">(2,548)</span>
+              </div>
+              <h3 class="main-links"><a href="#">Happy Sailed Women's Summer Boho Floral</a></h3>
+              <div class="price">
+                <span class="current">$129.99</span>
+                <span class="normal mini-text">$189.98</span>
+              </div>
+              <div class="stock mini-text">
+                <div class="qty">
+                  <span>Stock:<strong class="qty-available">107</strong></span>
+                  <span>Sold:<strong class="qty-sold">3,459</strong></span>
+                  
+                </div>
+                <div class="bar">
+                  <div class="available"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END OF FIRST ITEM -->
+        </div>
+        <div class="row products mini">
+          <div class="item">
+            <div class="media">
+              <div class="thumbnail object-cover">
+                <a href="#">
+                <img src="assets/products/apparel3.jpg" alt="">
+              </a>
+              </div>
+              <div class="hoverable">
+                <ul>
+                  <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
+                  <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                  <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                </ul>
+              </div>
+              <div class="discount circle flexcenter"><span>32%</span></div>
+            </div>
+            <div class="content">
+              
+              <h3 class="main-links"><a href="#">Black Women's Coat Dress</a></h3>
+              <div class="rating">
+                <div class="stars"></div>
+                <span class="mini-text">(2,548)</span>
+              </div>
+              <div class="price">
+                <span class="current">$129.99</span>
+                <span class="normal mini-text">$189.98</span>
+              </div>
+              <div class="mini-text">
+                <p>2975 sold</p>
+                <p>Free Shipping</p>
+              </div>
+            </div>
+          </div>
+        </div> 
+          <!-- END OF SECOND ITEM -->
+        
+        <div class="row products mini">
+
+          <div class="item">
+            <div class="media">
+              <div class="thumbnail object-cover">
+                <a href="#">
+                <img src="assets/products/shoe1.jpg" alt="">
+              </a>
+              </div>
+              <div class="hoverable">
+                <ul>
+                  <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
+                  <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                  <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                </ul>
+              </div>
+              <div class="discount circle flexcenter"><span>39%</span></div>
+            </div>
+            <div class="content">
+              
+              <h3 class="main-links"><a href="#">Men slip on shoes Casual with Arch Support Insoles</a></h3>
+              <div class="rating">
+                <div class="stars"></div>
+                <span class="mini-text">(1,559)</span>
+              </div>
+              <div class="price">
+                <span class="current">$469.99</span>
+                <span class="normal mini-text">$755.98</span>
+              </div>
+              <div class="mini-text">
+                <p>2151 sold</p>
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+          <div class="item">
+            <div class="media">
+              <div class="thumbnail object-cover">
+                <a href="#">
+                <img src="assets/products/apparel1.jpg" alt="">
+              </a>
+              </div>
+              <div class="hoverable">
+                <ul>
+                  <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
+                  <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                  <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                </ul>
+              </div>
+              <div class="discount circle flexcenter"><span>31%</span></div>
+            </div>
+            <div class="content">
+              
+              <h3 class="main-links"><a href="#">Men slip on shoes Casual with Arch Support Insoles</a></h3>
+              <div class="rating">
+                <div class="stars"></div>
+                <span class="mini-text">(2,548)</span>
+              </div>
+              <div class="price">
+                <span class="current">$129.99</span>
+                <span class="normal mini-text">$189.98</span>
+              </div>
+              <div class="mini-text">
+                <p>2975 sold</p>
+                <p>Free Shipping</p>
+                <p class="stock-danger">Stock: 7 Left!</p>
+              </div>
+            </div>
+          
+          <!-- END OF SECOND ITEM -->
+        </div>
+        
+          <div class="item">
+            <div class="media">
+              <div class="thumbnail object-cover">
+                <a href="#">
+                <img src="assets/products/shoe1.jpg" alt="">
+              </a>
+              </div>
+              <div class="hoverable">
+                <ul>
+                  <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
+                  <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                  <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                </ul>
+              </div>
+              <div class="discount circle flexcenter"><span>31%</span></div>
+            </div>
+            <div class="content">
+              
+              <h3 class="main-links"><a href="#">Children Nike Shoe</a></h3>
+              <div class="rating">
+                <div class="stars"></div>
+                <span class="mini-text">(2,548)</span>
+              </div>
+              <div class="price">
+                <span class="current">$129.99</span>
+                <span class="normal mini-text">$189.98</span>
+              </div>
+              <div class="mini-text">
+                <p>2975 sold</p>
+                <p>Free Shipping</p>
+              </div>
+            </div>
+          </div>
+          <!-- END OF THIRD ITEM -->
+          <div class="item">
+            <div class="media">
+              <div class="thumbnail object-cover">
+                <a href="#">
+                <img src="assets/products/apparel3.jpg" alt="">
+              </a>
+              </div>
+              <div class="hoverable">
+                <ul>
+                  <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
+                  <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                  <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                </ul>
+              </div>
+              <div class="discount circle flexcenter"><span>31%</span></div>
+            </div>
+            <div class="content">
+              
+              <h3 class="main-links"><a href="#">Men slip on shoes Casual with Arch Support Insoles</a></h3>
+              <div class="rating">
+                <div class="stars"></div>
+                <span class="mini-text">(2,548)</span>
+              </div>
+              <div class="price">
+                <span class="current">$129.99</span>
+                <span class="normal mini-text">$189.98</span>
+              </div>
+              <div class="mini-text">
+                <p>2975 sold</p>
+                <p>Free Shipping</p>
+                <p class="stock-danger">Stock: 7 Left!</p>
+              </div>
+            </div>
+          
+          <!-- END OF SECOND ITEM -->
+        </div>
+        
+          <div class="item">
+            <div class="media">
+              <div class="thumbnail object-cover">
+                <a href="#">
+                <img src="assets/products/shoe1.jpg" alt="">
+              </a>
+              </div>
+              <div class="hoverable">
+                <ul>
+                  <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
+                  <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                  <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                </ul>
+              </div>
+              <div class="discount circle flexcenter"><span>31%</span></div>
+            </div>
+            <div class="content">
+              
+              <h3 class="main-links"><a href="#">Children Nike Shoe</a></h3>
+              <div class="rating">
+                <div class="stars"></div>
+                <span class="mini-text">(2,548)</span>
+              </div>
+              <div class="price">
+                <span class="current">$129.99</span>
+                <span class="normal mini-text">$189.98</span>
+              </div>
+              <div class="mini-text">
+                <p>2975 sold</p>
+                <p>Free Shipping</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
